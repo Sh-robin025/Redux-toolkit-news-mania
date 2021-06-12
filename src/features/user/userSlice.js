@@ -5,7 +5,6 @@ export const userSlice = createSlice({
     initialState: {
         isSignedIn: false,
         userData: null,
-        newsData: null,
     },
     reducers: {
         userSignedIn: (state, action) => {
@@ -13,12 +12,9 @@ export const userSlice = createSlice({
         },
         userData: (state, action) => {
             state.userData = action.payload
-        },
-        newsData: (state, action) => {
-            state.newsData = action.payload
         }
     }
 })
 
-export const { userSignedIn, userData, newsData } = userSlice.actions;
+export const { userSignedIn, userData } = userSlice.actions;
 export default userSlice.reducer;
